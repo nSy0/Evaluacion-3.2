@@ -1,5 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Header css*/
+#header > .inner-content-header > #logo{
+    color:black;
+    list-style: none;
 
 
+}
+
+#navbarContent > ul > li > a{
+    color: black;
+}
+#ventas, a{
+    color:black;
+}
+
+#logo .logo-tienda{
+
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.jumbotron{
+    background-image: url(../img/woman.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.jumbo-content{
+    height: 70vh;
+}
+.jumbo-content > .titulo > p, h1{
+    color:white;
+
+
+}
 h1{
-    color:yellowgreen;
+    font-weight: bolder;
+    font-size: 4em;
+    
+}
+
+.paragraph > a{
+    background-color: rgb(90, 7, 18);
+    padding: 10px 50px;
+    border-radius: 50px;
+    border-color: white;
+
+}
+.paragraph > a:hover{
+    background-color: white;
+    color: black;
+    border-color:rgb(90, 7, 18);
 }
