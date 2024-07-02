@@ -8,4 +8,4 @@ def index(request):
     return render(request, 'core/index.html')
 
 def login(request):
-    return render(request, 'core/login.html')
+    return render(request, 'accounts/login')
