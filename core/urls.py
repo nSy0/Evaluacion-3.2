@@ -1,11 +1,15 @@
 from django.urls import path
-from django.contrib import admin
-from core import views
-from core.views import index
+from . import views
 
-
-app_name = "core"
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('index', views.index, name='index'),
+    path('collections', views.collections, name='collections'),
+    path('contacto', views.contacto, name='contacto'),
+    path('journal', views.journal, name='journal'),
+    path('men', views.men, name='men'),
+    path('women', views.women, name='women'),
+    path('login', views.accounts, name='login'),
+    path('register', views.accounts, name='register'),
+
 ]
