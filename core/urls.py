@@ -1,10 +1,11 @@
 from django.urls import path
-from . import views
+from django.contrib import admin
+from core import views
+from core.views import index
 
 
-app_name = "Ecommerce"
+app_name = "core"
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('login/', views.login, name='login'),
+    path('', index, name='index'),
 ]
