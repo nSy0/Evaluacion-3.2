@@ -20,6 +20,9 @@ def men(request):
 def women(request):
     return render(request, 'core/women.html')
 
+def carrito(request):
+    return render(request, 'core/carrito.html')
+
 #register section
 def accounts(request):
     return render(request, 'registration/login.html')
