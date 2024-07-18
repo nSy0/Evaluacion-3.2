@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('collections', views.collections, name='collections'),
@@ -13,5 +14,4 @@ urlpatterns = [
     #register section
     path('login', views.accounts, name='login'),
     path('register', views.accounts, name='register'),
-
 ]
