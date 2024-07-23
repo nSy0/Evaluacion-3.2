@@ -50,4 +50,6 @@ class Payment(models.Model):
     razorpay_payment_status = models.CharField(max_length=100,blank=True,null=True)
     razorpay_payment_id = models.CharField(max_length=100,blank=True,null=True)
     paid = models.BooleanField(default=False)
+    
+
 

@@ -1,0 +1,36 @@
+{% extends 'partials/base.html'%}
+{% load static %} 
+    {% block content %}
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Iniciar sesión</h2>
+                <form method="post" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                
+                    {{ form.non_field_errors }}
+                    <div class="form-group">
+                        <label for="id_username">Correo electronico</label>
+                        <input type="email" id="id_username" name="email" class="form-control" placeholder="Ingrese su correo" required>
+                        <div class="invalid-feedback">
+                            Por favor ingrese su correo.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_password">Contraseña</label>
+                        <input type="password" id="id_password" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
+                        <div class="invalid-feedback">
+                            Por favor ingrese su contraseña.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}
+
+      

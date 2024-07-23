@@ -1,0 +1,25 @@
+{% extends 'partials/base.html'%}
+{% load static %} 
+
+    {% block content %}
+
+    <div class="container">
+        <h1 class="mt-5 mb-4">Journal de Perfumes</h1>
+        <div class="row">
+            {% for entrada in entradas %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="{{ entrada.imagen_perfume.url }}" class="card-img-top img-fluid" alt="{{ entrada.titulo }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ entrada.titulo }}</h5>
+                        <p class="card-text">{{ entrada.contenido }}</p>
+                        <p class="card-text"><small class="text-muted">Fecha: {{ entrada.fecha }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock content %}
+
+      

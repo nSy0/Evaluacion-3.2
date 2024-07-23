@@ -1,23 +1,22 @@
 from django.shortcuts import render, redirect
 
 
+
 from .models import Carrito, Cliente, Producto
 from django.http import JsonResponse
 from django.views import View
 
 # Create your views here.
 
-# def index(request):
-#     return render(request, 'core/index.html')
 
-def contacto(request):
-    return render(request, 'core/contacto.html')
+def contact(request):
+    return render(request, 'userauths/contact.html')
 
 def collections(request):
     return render(request, 'core/collections.html')
 
 def journal(request):
-    return render(request, 'core/journal.html')
+    return render(request, 'userauths/journal.html')
 
 def men(request):
     return render(request, 'core/men.html')
@@ -124,21 +123,4 @@ def remove_cart(request):
         }
         return JsonResponse(data)
 
-# #register section
-# def accounts(view):
-#     def get(self,request):
-#         form = accountsForm()
-#         return render(request, 'registration/login.html')
-#     def post(self,request):
-#         form = accountsForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             messages.success(request,"Felicidades! Usuario registrado exitoso")
-#         else:
-#             messages.warning(request,"datos invalidos")
-#         return render(request, 'registration/login.html')
-
-
-# def accounts(request):
-#     return render(request, 'registration/register.html')
 

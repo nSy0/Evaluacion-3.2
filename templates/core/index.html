@@ -1,5 +1,5 @@
 {% extends 'partials/base.html'%}
-   
+{% load static %} 
     {% block content %}
 
 
@@ -22,18 +22,26 @@
     </div>
 
     <div class="container">
-        {% for core_producto in productos %}
-            <div class="product">
-                <img src="https://www.elcomercio.com/wp-content/uploads/2024/05/pedro-pedro-meme.jpg" alt="" style="width: 300px;">
-                <h3>{{ core_producto.titulo }}</h3>
-                <p>Precio: ${{ core_producto.precio }}</p>
-                <p>{{ core_producto.descripcion }}</p>
-                <p>Categoría: {{ core_producto.categoria }}</p>
+        <h2>Perfumes</h2>
+        <div class="row">
+            {% for producto in productos %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="{{ producto.imagen_producto.url }}" class="card-img-top img-fluid" alt="{{ producto.nombre }}" style="height: 400px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ producto.nombre }}</h5>
+                        <p class="card-text">Precio: ${{ producto.precio }}</p>
+                        <p class="card-text">Categoría: {{ producto.categoria }}</p>
+                        <p class="card-text">{{ producto.descripcion }}</p>
+                    </div>
+                    
+                </div>
             </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
     
-
+    
 
     {% endblock content %}
 
