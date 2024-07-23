@@ -3,6 +3,9 @@
 {% block tittle %}Carrito{% endblock tittle%} 
    
     {% block content %}
+
+        {% block main-content %}
+        
         <div class="container my-5">
             <div class="row">
                 
@@ -76,9 +79,8 @@
                 {% endif %}
             </div>
         </div>
-
-
-
+        
+        {% endblock main-content%}
 
     {% endblock content %}
 
