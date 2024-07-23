@@ -7,8 +7,8 @@ from django.views import View
 
 # Create your views here.
 
-def index(request):
-    return render(request, 'core/index.html')
+# def index(request):
+#     return render(request, 'core/index.html')
 
 def contacto(request):
     return render(request, 'core/contacto.html')
@@ -24,6 +24,12 @@ def men(request):
 
 def women(request):
     return render(request, 'core/women.html')
+
+#producto
+
+def index(request):
+    productos = Producto.objects.all()
+    return render(request, 'core/index.html', {'productos': productos})
 
 #Carrito 
 

@@ -2,8 +2,22 @@
    
     {% block content %}
 
+   
+    {% for core_producto in Producto %}
+    <div class="container">
+        
 
+        <p>{{ core_producto.titulo }}</p>
+        <p>{{ core_producto.precio }}</p>
+        <p>{{ core_producto.descripcion }}</p>
+        <p>{{ core_producto.categoria }}</p>
 
+        
+    
+
+    {% endfor %}
+    
+</div>
 
 
     {% endblock content %}

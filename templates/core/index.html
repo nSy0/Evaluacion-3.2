@@ -20,7 +20,20 @@
         </div>
         
     </div>
-   
+
+    <div class="container">
+        {% for core_producto in productos %}
+            <div class="product">
+                <img src="https://www.elcomercio.com/wp-content/uploads/2024/05/pedro-pedro-meme.jpg" alt="" style="width: 300px;">
+                <h3>{{ core_producto.titulo }}</h3>
+                <p>Precio: ${{ core_producto.precio }}</p>
+                <p>{{ core_producto.descripcion }}</p>
+                <p>Categoría: {{ core_producto.categoria }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    
+
 
     {% endblock content %}
 
